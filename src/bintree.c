@@ -8,6 +8,9 @@
 #include <stdlib.h>
 #include "bintree.h"
 
+#define TRUE 1
+#define FALSE 0
+
 struct node *new_node(int data)
 {
     struct node *node = (struct node *)malloc(sizeof(struct node));
@@ -39,11 +42,11 @@ int search_node(struct node *root, int data)
 {
     if (root == NULL)
     {
-        return -1;
+        return FALSE;
     }
     else if (data == root->data)
     {
-        return root->data;
+        return TRUE;
     }
     else if (data < root->data)
     {

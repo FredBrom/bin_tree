@@ -19,5 +19,16 @@ int main(int argc, char **argv)
     print_tree(tree);
     putchar('\n');
 
+    /* Search binary tree */
+    for (i=0; i<10; i++)
+    {
+        if (search_node(tree,i))
+        {
+            printf("%d ", i);
+        }
+    }
+
+    putchar('\n');
+
     return 0;
 }
